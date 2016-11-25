@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<body>
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Courses</button>
+    <div id="myCourses" class="dropdown_content">
+        <a href="#Telecom">Telecom</a>
+        <a href="#Datacom">Datacom</a>
+        <a href="#Enbeded">Embeded</a>
+        <a href="#Scripting">Scripting</a>
+        <a href="#DevOps">DevOps</a>
+        <a href="#Cloud">Cloud</a>
+    </div>
+</div>
+<script>
+    Function myFunction(){
+        document.getElementById("myCourses").classList.toggle("show");
+    }
+    window.onclick=function (event) {
+        if (!event.target.matches('.dropbtn')){
+            var dropdowns=document.getElementsByClassName("dropdown_content");
+            var i;
+            for(i=0;i<dropdowns.length;i++){
+                var openDropdown=dropdowns[i];
+                if(openDropdown.classList.Contains('show')){
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+    <div id="myCourses" class="dropdown_content">
+        <a href="{% url "telecom" %}">Telecom</a><br\>
+        <a href="{% url "datacom" %}">Datacom</a><br\>
+        <a href="{% url "embeded" %}">Embeded</a><br\>
+        <a href="{% url "scripting" %}">Scripting</a><br\>
+        <a href="{% url "devops" %}">DevOps</a><br\>
+        <a href="{% url "cloud" %}">Cloud</a><br\>
+    </div>
+</div>
+<script>
+     <select id="mySelect" onchange="myFunction()">
+  <option value="Telecom">Telecom</option><br\>
+  <option value="Datacom">Datacom</option><br/>
+  <option value="Embeded">Embeded</option><br\>
+  <option value="Scripting">Scripting</option><br\>
+  <option value="Devops">Devpos</option><br\>
+  <option value="Cloud">Cloud</option><br\>
+</select>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+</body>
+</html>

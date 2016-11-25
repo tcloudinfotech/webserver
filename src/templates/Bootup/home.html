@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} HOME|TCLOUD IT {% endblock %}
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+{% load staticfiles %}
+
+{% block slider %}
+ {% include 'Bootup/home_slider.html' %}
+{% endblock %}
+
+{% block features %}
+  {% include 'Bootup/home_features.html' %}
+{% endblock %}
+
+{% block recentworks %}
+ {% include 'Bootup/home_recent_works.html' %}
+{% endblock %}
+
+{% block services %} 
+ {% include 'Bootup/home_services.html' %}
+{% endblock %}
+
+{% block middle %}
+ {% include 'Bootup/home_middle.html' %}
+{% endblock %}
+
+{% block partner %} 
+ {% include 'Bootup/home_partner.html' %}
+{% endblock %}

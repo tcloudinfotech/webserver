@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'Bootup/common_head_style.html' %}
+    <title>{% block title %} {% endblock %}</title>  
+</head><!--/head-->
+
+<body class="homepage">
+
+    <header id="header">
+            {% include 'Bootup/common_top_bar.html' %}
+            {% include 'Bootup/common_navbar.html' %}
+    </header><!--/header-->
+
+{% block breadcrumb %} {% endblock %}
+{% block content %} {% endblock %}
+{% block slider %} {% endblock %}
+{% block features %} {% endblock %}
+{% block recentworks %} {% endblock %}
+{% block services %} {% endblock %}
+{% block middle %} {% endblock %}    
+{% block partner %} {% endblock %}
+{% block contact %} {% endblock %}
+{% include 'Bootup/common_bottom.html' %}
+{% include 'Bootup/common_footer.html' %}
+</body>
+</html>

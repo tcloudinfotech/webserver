@@ -1,0 +1,70 @@
+        {% load staticfiles %}
+        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active');
+    });
+
+
+</script>
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">TCLOUD IT<img src="" alt=""></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-right ">
+                    <ul class="nav navbar-nav required">
+                        <li id='Home'><a href="/">Home</a></li>
+                        <li class="dropdown" id="Courses">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" >
+                                <li ><a href="{% url 'telecom' %}">Telecom</a></li>
+                                <li><a href="{% url 'datacom' %}">Datacom</a></li>
+                                <li><a href="{% url 'embeded' %}">Embedded</a></li>
+                                <li><a href="{% url 'scripting'%}">Scripting</a></li>
+                                <li><a href="{% url 'devops' %}">DevOps</a></li>
+                                <li><a href="{% url 'cloud' %}">Cloud</a></li>
+                            </ul>
+                        </li>
+
+                        <li id="Services" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'services'%}">Corporate Training</a></li>
+                                <li><a href="{% url 'services'%}">Consulting</a></li>
+                                <li><a href="{% url 'services'%}">Free Outsourcing</a></li>
+                                <li><a href="{% url 'services'%}">Protocol Testing </a></li>
+                                <li><a href="{% url 'services'%}">Protocol Development </a></li>
+                                <li><a href="{% url 'services'%}">Automation </a></li>
+                                <li><a href="{% url 'services'%}">Web Development </a></li>
+                             </ul>
+                        </li>
+                        <li id="Products" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">LTE Functional Tester</a></li>
+                                <li><a href="#">LTE Load Tester</a></li>
+                                <li><a href="#">LTE HSS Emulator</a></li>
+                                <li><a href="#">ASN.1 CoDecs</a></li>
+                                <li><a href="#">Django Web Templates</a></li>
+                             </ul>
+                        </li>
+                        <li id="Careers"><a href="http://careers.tcloudtech.com" target="-blank">Careers</a></li>
+                        <li id="About Us"><a href="{% url 'aboutus' %}">About Us</a></li>
+                        <li id="Contact"><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
