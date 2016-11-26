@@ -38,7 +38,7 @@ urlpatterns = [
     url(r'^ttcn3/','mysite.views.ttcn3',name='ttcn3'),
 
     # services
-    url(r'^services/$','mysite.views.services',name='services'),
+    url(r'^services/','mysite.views.services',name='services'),
 
     
     

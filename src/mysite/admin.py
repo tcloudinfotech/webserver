@@ -16,4 +16,4 @@ admin.site.register(Python_Course_Schedule,PersonAdmin)
 # class CourseAdmin(admin.ModelAdmin):
 #     list_display = ('topic','content')
 
-# admin.site.register(Django_Subject_Details,CourseAdmin)
+# admin.site.register(Django_Subject_Details,CourseAdmin) 	
