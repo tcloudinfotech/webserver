@@ -215,6 +215,7 @@ def django(request):
 def services(request):
     return render(request,'services/services1.html',{})
 
+<<<<<<< Updated upstream
 
 def l2l3dev(request):
     context={}
@@ -225,3 +226,5 @@ def l2l3test(request):
     return render(request, 'courses/Datacom/L2_L3_Test.html',context)
 
     
+=======
+>>>>>>> Stashed changes
