@@ -2,6 +2,17 @@
 
 {% load staticfiles %}
 
+{% block title %} L2 L3 Protocol Testing {% endblock %}
+
+{% block breadcrumb %} 
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><a href="{% url 'home' %}">Courses</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'datacom' %}">Datacom</a></li>
+    <li class="breadcrumb-item active">L2 L3 Protocol Testing </li>
+ </ol>
+{% endblock %}
+
+
 {% block content%}
 
 {#    <style type="text/css">#}
@@ -143,7 +154,7 @@
             <div class="row">
                <div class="col-sm-8 wow fadeInDown">
                     <div class="accordion">
-                        <h2>L2 L3 Protocol Development</h2>
+                        <h2>L2 L3 Protocol Testing</h2>
                         <div class="panel-group" id="accordion1">
                           <div class="panel panel-default">
                             <div class="panel-heading active">

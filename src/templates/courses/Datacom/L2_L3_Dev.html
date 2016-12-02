@@ -2,6 +2,16 @@
 
 {% load staticfiles %}
 
+{% block title %} L2 L3 Protocol Development {% endblock %}
+
+{% block breadcrumb %} 
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><a href="{% url 'home' %}">Courses</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'datacom' %}">Datacom</a></li>
+    <li class="breadcrumb-item active">L2 L3 Protocol Development </li>
+ </ol>
+{% endblock %}
+
 {% block content%}
 
 {#    <style type="text/css">#}
