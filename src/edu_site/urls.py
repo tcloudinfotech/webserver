@@ -29,6 +29,12 @@ urlpatterns = [
     url(r'^LTEProtocolTesting/','mysite.views.LTEPT',name='ltept'),
     url(r'^VOIPSipImsProtocolDevelopment/','mysite.views.VOIP_SIP_IMS_PD',name='voippd'),
     url(r'^VOIPSipImsProtocolTesting/','mysite.views.VOIP_SIP_IMS_PT',name='voippt'),
+
+    #main tab of datacom and relative subtags
+    url(r'^L2L3ProtocolDevelopment','mysite.views.l2l3dev',name='l2l3dev'),
+    url(r'^L2L3ProtocolTesting','mysite.views.l2l3test',name='l2l3test'),
+
+
     # Main tab of scripting and relative subtags.
     url(r'^Scripting/','mysite.views.scripting',name='scripting'),
     url(r'^PythonProgramming/','mysite.views.python',name='python'),

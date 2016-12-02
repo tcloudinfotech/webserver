@@ -215,10 +215,13 @@ def django(request):
 def services(request):
     return render(request,'services/services1.html',{})
 
-# def services(request,offset):
-#     value=offset
-#     print value
-#     if value == "1":
-#         return render(request,'services/services1.html',{})
-#     elif value == "2":
-#         return render(request,'services/services2.html',{})
+
+def l2l3dev(request):
+    context={}
+    return render(request,'courses/Datacom/L2_L3_Dev.html',context)
+
+def l2l3test(request):
+    context={}
+    return render(request, 'courses/Datacom/L2_L3_Test.html',context)
+
+    
