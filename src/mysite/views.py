@@ -9,9 +9,7 @@ from django.shortcuts import render
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 from django.template import Context
-# Create your views here.
-from mysite.models import Django_Course_Schedule,Python_Course_Schedule
-from mysite.models import Course_Popup_Window
+from mysite.models import *
 from reportlab.pdfgen import canvas
 import os
 from wsgiref.util import FileWrapper
@@ -51,10 +49,6 @@ def Pop_Up_view(request):
             course=course
         )
         return HttpResponse('')
-
-
-
-
 
 
 
@@ -109,7 +103,6 @@ def course_index(request):
     return render(request,'Bootup/my_course.html',context)
 
 
-
 def myhome(request):
     context={}
     return render(request,'Bootup/home.html',context)
@@ -120,24 +113,14 @@ def courses(request):
     return render(request,'Bootup/course.html',context)
 
 
-
-
 def aboutus(request):
 	context={}
 	return render(request,'Bootup/about-us.html',context)
 
 
-
-def datacom(request):
-    context={}
-    return render(request,'courses/datacom.html',context)
-
 def embeded(request):
     context={}
     return render(request,'courses/embeded.html',context)
-
-
-
 
 
 def devops(request):
@@ -159,23 +142,51 @@ def telecom(request):
 # Details for Telecome course content subtabs - read more
 
 def LTEPD(request):
-    context={}
-    return render(request,'courses/Telecome/LTEPD.html',context)
+    property = [Ltepd_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Telecome/LTEPD.html',context, 
+        context_instance=RequestContext(request))
+    
 
 
 def LTEPT(request):
-    context={}
+    property = [Ltept_Course_Schedule.objects.last()]
+    context={'property': property}
     return render(request,'courses/Telecome/LTEPT.html',context)
 
 
 def VOIP_SIP_IMS_PD(request):
-    context={}
+    property = [Voip_Sip_Ims_Pd_Course_Schedule.objects.last()]
+    context={'property': property}
     return render(request,'courses/Telecome/VOIP_SIP_IMS_PD.html',context)
 
 
 def VOIP_SIP_IMS_PT(request):
-    context={}
+    property = [Voip_Sip_Ims_Pt_Course_Schedule.objects.last()]
+    context={'property': property}
     return render(request,'courses/Telecome/VOIP_SIP_IMS_PT.html',context)
+
+
+#Main Page for Datacom
+
+def datacom(request):
+    context={}
+    return render(request,'courses/datacom.html',context)
+
+# Details for Datacom courses content subtabs - read more
+
+def l2l3dev(request):
+    property= [L2_L3_Pd_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Datacom/L2_L3_Dev.html',context)
+
+def l2l3test(request):
+    property = [L2_L3_Pt_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request, 'courses/Datacom/L2_L3_Test.html',context,
+        context_instance=RequestContext(request))
+
+
 
 
 # Main page for scripting
@@ -203,6 +214,10 @@ def ttcn3(request):
     context={}
     return render(request,'courses/scripting/ttcn3.html',context)
 
+def flask(request):
+    context={}
+    return render(request,'courses/scripting/flask.html',context)
+
 def django(request):
     property = [Django_Course_Schedule.objects.last()]
     #property1 = Django_Subject_Details.objects.order_by('topic')
@@ -215,11 +230,4 @@ def django(request):
 def services(request):
     return render(request,'services/services1.html',{})
 
-def l2l3dev(request):
-    context={}
-    return render(request,'courses/Datacom/L2_L3_Dev.html',context)
-
-def l2l3test(request):
-    context={}
-    return render(request, 'courses/Datacom/L2_L3_Test.html',context)
 

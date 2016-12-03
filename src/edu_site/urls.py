@@ -25,23 +25,24 @@ urlpatterns = [
     url(r'^info/','mysite.views.my_fun',name='info'),
     # Main tab of telecome and relative subtags.
     url(r'^Telecom/','mysite.views.telecom',name='telecom'),
-    url(r'^LTEProtocolDevelopment/','mysite.views.LTEPD',name='ltepd'),
-    url(r'^LTEProtocolTesting/','mysite.views.LTEPT',name='ltept'),
-    url(r'^VOIPSipImsProtocolDevelopment/','mysite.views.VOIP_SIP_IMS_PD',name='voippd'),
-    url(r'^VOIPSipImsProtocolTesting/','mysite.views.VOIP_SIP_IMS_PT',name='voippt'),
+    url(r'^LTE-Protocol-Development/','mysite.views.LTEPD',name='ltepd'),
+    url(r'^LTE-Protocol-Testing/','mysite.views.LTEPT',name='ltept'),
+    url(r'^VOIP-SIP-IMS-Protocol-Development/','mysite.views.VOIP_SIP_IMS_PD',name='voippd'),
+    url(r'^VOIP-SIP-IMS-Protocol-Testing/','mysite.views.VOIP_SIP_IMS_PT',name='voippt'),
 
     #main tab of datacom and relative subtags
-    url(r'^L2L3ProtocolDevelopment','mysite.views.l2l3dev',name='l2l3dev'),
-    url(r'^L2L3ProtocolTesting','mysite.views.l2l3test',name='l2l3test'),
+    url(r'^L2&L3-Protocol-Development','mysite.views.l2l3dev',name='l2l3dev'),
+    url(r'^L2&L3-Protocol-Testing','mysite.views.l2l3test',name='l2l3test'),
 
 
     # Main tab of scripting and relative subtags.
     url(r'^Scripting/','mysite.views.scripting',name='scripting'),
-    url(r'^PythonProgramming/','mysite.views.python',name='python'),
-    url(r'^DjangoFramework/','mysite.views.django',name='django'),
-    url(r'^pandasDataAnalysis/','mysite.views.pandas',name='pandas'),
-    url(r'^PerlProgramming/','mysite.views.perl',name='perl'),
-    url(r'^ttcn3/','mysite.views.ttcn3',name='ttcn3'),
+    url(r'^Python-Programming/','mysite.views.python',name='python'),
+    url(r'^Django-Web_Framework/','mysite.views.django',name='django'),
+    url(r'^Flask-Web_Framework/','mysite.views.flask',name='flask'),
+    url(r'^Pandas-Data-Analysis/','mysite.views.pandas',name='pandas'),
+    url(r'^Perl-Programming/','mysite.views.perl',name='perl'),
+    url(r'^Testing&Test-Control-Notation_3/','mysite.views.ttcn3',name='ttcn3'),
 
     # services
     url(r'^services/','mysite.views.services',name='services'),
