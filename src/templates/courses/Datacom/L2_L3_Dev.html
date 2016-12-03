@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %} L2 L3 Protocol Development {% endblock %}
+{% block title %} L2 L3 Protocol Development Training in Hyderabad|Bangalore|Online {% endblock %}
 
 {% block breadcrumb %} 
   <ol class="breadcrumb">
@@ -93,7 +93,7 @@
 
             </div><!--/.table closed --> 
 
-     <div class="col-sm-3" style="float: right;padding-left: 1px;margin-left: 1px;">
+    {#  <div class="col-sm-3" style="float: right;padding-left: 1px;margin-left: 1px;">
                      <h2> Course Schedule</h2>
                     <table class="table table-bordered" >
                     <tr><th>Course Name</th><td> </td></tr>
@@ -104,6 +104,8 @@
                     </table>
 
      </div>
+ #}
+
 
 </head>
 <body>
@@ -259,14 +261,23 @@
                         </div><!--/#accordion1-->
                     </div>
                 </div>
-                 <div class="row">
-               <div class="col-sm-4 wow fadeInDown">
+                 <div class="col-md-4">
+
+                    <h2> Course Schedule</h2>
+                    <table class="table table-bordered" >
+                        {% for i in property %}
+                                <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
+                                <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
+                                <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
+                                <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
+                                <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
 
 
+                        {% endfor%}
+                    </table> 
 
 
-               </div>
-            </div>
+  </div>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#middle-->
@@ -286,7 +297,7 @@
 {#            <button onclick=showpopup();"{% url "some_view" %}" >Django PDF</button>#}
 
 
-<button type="button" class="btn btn-info btn-lg" data-target="#Starpopup" onclick="showpopup();">Django PDF FILE</button>
+<button type="button" class="btn btn-info btn-lg" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
 
 <!-- Trigger the modal with a button -->
 
