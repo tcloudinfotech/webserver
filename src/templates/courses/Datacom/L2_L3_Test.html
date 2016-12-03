@@ -94,7 +94,7 @@
 
             </div><!--/.table closed --> 
 
-     <div class="col-sm-3" style="float: right;padding-left: 1px;margin-left: 1px;">
+<!--      <div class="col-sm-3" style="float: right;padding-left: 1px;margin-left: 1px;">
                      <h2> Course Schedule</h2>
                     <table class="table table-bordered" >
                     <tr><th>Course Name</th><td> </td></tr>
@@ -104,7 +104,7 @@
                     <tr><th>Demo</th><td><a href=""target="_blank"></a></td></tr>
                     </table>
 
-     </div>
+     </div> -->
 
 </head>
 <body>
@@ -199,7 +199,7 @@
                               </h3>
                             </div>
 
-                            <div id="collapseTwo1" class="panel-collapse collapse in">
+                            <div id="collapseTwo1" class="panel-collapse collapse">
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
@@ -234,7 +234,7 @@
                               </h3>
                             </div>
 
-                            <div id="collapseThree1" class="panel-collapse collapse in">
+                            <div id="collapseThree1" class="panel-collapse collapse">
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
@@ -265,14 +265,28 @@
                         </div><!--/#accordion1-->
                     </div>
                 </div>
-                 <div class="row">
-               <div class="col-sm-4 wow fadeInDown">
+ <div class="col-md-4">
+
+                    <h2> Course Schedule</h2>
+                    <table class="table table-bordered" >
+                        {% for i in property %}
+                                <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
+                                <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
+                                <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
+                                <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
+                                <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
 
 
+                        {% endfor%}
+                    </table> 
+
+                    <a class="btn btn-default" href="#" role="button">Join</a>
+                    <a class="btn btn-default" href="#" role="button">Other Timings</a>
+                     <button type="button" class="btn btn-primary" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
+
+  </div>
 
 
-               </div>
-            </div>
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#middle-->
@@ -292,7 +306,7 @@
 {#            <button onclick=showpopup();"{% url "some_view" %}" >Django PDF</button>#}
 
 
-<button type="button" class="btn btn-info btn-lg" data-target="#Starpopup" onclick="showpopup();">Deatiled Course Content</button>
+<!-- <button type="button" class="btn btn-info btn-lg" data-target="#Starpopup" onclick="showpopup();">Deatiled Course Content</button> -->
 
 <!-- Trigger the modal with a button -->
 
