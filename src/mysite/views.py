@@ -27,13 +27,7 @@ def some_view(request):
     except :
         raise Http404()
 
-# Contactus Form:
 
-# def django(request):
-#     obj=Course_Schedule.objects.all()
-#     data = {}
-#     data['object_list'] = obj
-#     return render(request, 'courses/django.html', data)
 
 def my_fun(request):
     return HttpResponse("hello django")
@@ -117,20 +111,14 @@ def aboutus(request):
 	context={}
 	return render(request,'Bootup/about-us.html',context)
 
+# services page
+def services(request):
+    return render(request,'services/services1.html',{})
+
 
 def embeded(request):
     context={}
     return render(request,'courses/embeded.html',context)
-
-
-def devops(request):
-    context={}
-    return render(request,'courses/devops.html',context)
-
-
-def cloud(request):
-    context={}
-    return render(request,'courses/cloud.html',context)
 
 
 # Main page for Telecom
@@ -225,9 +213,86 @@ def django(request):
     return render_to_response('courses/scripting/django.html', itemin, context_instance=RequestContext(request))
 
 
-# services page
 
-def services(request):
-    return render(request,'services/services1.html',{})
+# main views for cloud
+
+def cloud(request):
+    context={}
+    return render(request,'courses/cloud.html',context)
+
+#Detiled view for openstack and readmore
+def openstack(request):
+    property = [Openstack_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Cloud/Openstack.html',context)
+
+#Detailed view for Amazon Web Services and readmore
+def aws(request):
+    property = [Aws_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Cloud/AWS.html',context)
+
+# main Page for Embeded
+
+def embeded(request):
+    context={}
+    return render(request,'courses/embeded.html',context)
+
+# Detailed page for Internet of Things:
+def iot(request):
+    property = [Iot_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Embeded/IOT.html',context)
+
+
+
+# main Page for Devops
+
+def devops(request):
+    context={}
+    return render(request,'courses/devops.html',context)
+
+# Detailed page for Ansibel:
+def ansibel(request):
+    property = [Ansibel_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Ansibel.html',context)
+
+# Detailed page for Dockers:
+def dockers(request):
+    property = [Dockers_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Dockers.html',context)
+
+# Detailed page for Chef:
+def chef(request):
+    property = [Chef_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Chef.html',context)
+
+# Detailed page for Chef:
+def nagios(request):
+    property = [Nagios_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Nagios.html',context)
+
+# Detailed page for GIT:
+def git(request):
+    property = [Git_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Git.html',context)
+
+# Detailed page for Jenkins:
+def jenkins(request):
+    property = [Jenkins_Course_Schedule.objects.last()]
+    context={'property': property}
+    return render(request,'courses/Devops/Jenkins.html',context)
+
+
+
+
+
+
+
 
 

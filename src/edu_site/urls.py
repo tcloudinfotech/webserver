@@ -19,9 +19,9 @@ urlpatterns = [
     url(r'^aboutus/','mysite.views.aboutus',name='aboutus'),
     # course tabs
     url(r'^datacom/','mysite.views.datacom',name='datacom'),
-    url(r'^embeded/','mysite.views.embeded',name='embeded'),
-    url(r'^devops/','mysite.views.devops',name='devops'),
-    url(r'^cloud/','mysite.views.cloud',name='cloud'),
+    
+    
+    
     url(r'^info/','mysite.views.my_fun',name='info'),
     # Main tab of telecome and relative subtags.
     url(r'^Telecom/','mysite.views.telecom',name='telecom'),
@@ -43,6 +43,27 @@ urlpatterns = [
     url(r'^Pandas-Data-Analysis/','mysite.views.pandas',name='pandas'),
     url(r'^Perl-Programming/','mysite.views.perl',name='perl'),
     url(r'^Testing&Test-Control-Notation_3/','mysite.views.ttcn3',name='ttcn3'),
+
+    # main tab for cloud and relative subtags
+    url(r'^Cloud/','mysite.views.cloud',name='cloud'),
+    url(r'^Openstack/','mysite.views.openstack',name='openstack'),
+    url(r'^Amazon-Web-Services/','mysite.views.aws',name='aws'),
+
+
+    # Main tab for cloud and relative subtags
+    url(r'^embeded/','mysite.views.embeded',name='embeded'),
+    url(r'^Internet-of-Things/','mysite.views.iot',name='iot'),
+
+    # Main urls for devops and relative subtags
+    url(r'^Devops/','mysite.views.devops',name='devops'),
+    url(r'^Ansibel/','mysite.views.ansibel',name='ansibel'),
+    url(r'^Dockers/','mysite.views.dockers',name='dockers'),
+    url(r'^Chef/','mysite.views.chef',name='chef'),
+    url(r'^Nagios/','mysite.views.nagios',name='nagios'),
+    url(r'^GIT/','mysite.views.git',name='git'),
+    url(r'^Jenkins/','mysite.views.jenkins',name='jenkins'),
+    
+
 
     # services
     url(r'^services/','mysite.views.services',name='services'),
