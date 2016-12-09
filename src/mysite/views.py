@@ -290,7 +290,12 @@ def jenkins(request):
 
 
 
+# other timings
 
+def othertimings(request):
+    property = Python_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/total_courses_schedule.html',context)
 
 
 

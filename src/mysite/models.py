@@ -16,6 +16,14 @@ class Course_Popup_Window(models.Model):
 
 
 
+
+COLOR_CHOICES = (
+    ('regular','REGULAR'),
+    ('weekend', 'WEEKEND'),
+    ('bootcamp','BOOTCAMP'),
+    ('online','ONLINE'),
+    ('fasttrack','FASTTRACK'),
+)
 # Course Schedule models
 
 class base_database(models.Model):
@@ -23,6 +31,7 @@ class base_database(models.Model):
     schedlue'''
     course_name=models.CharField(max_length=256,null=True,blank=True)
     start_date=models.DateTimeField(null=True,blank=True)
+    batchtype=models.CharField(max_length=12, choices=COLOR_CHOICES, default='regular')
     duration=models.CharField(max_length=256,null=True,blank=True)
     faculty=models.CharField(max_length=256,null=True,blank=True)
     demo = models.URLField(max_length=256,null=True,blank=True)
@@ -37,12 +46,12 @@ class base_database(models.Model):
 # Openstack Course Schedule:
 class Openstack_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 # Amazon Webservices Course_Schedule
 class Aws_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 
 
@@ -51,113 +60,103 @@ class Aws_Course_Schedule(base_database):
 # Internet of Things Course Schedule:
 class Iot_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 # Devops Course Schedule:
 
 #Ansibel Course Schedule:
 class Ansibel_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #Dockers Course Schedule:
 class Dockers_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 #Chef Course Schedule:
 class Chef_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #Nagios Course Schedule:
 class Nagios_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #GIT Course Schedule:
 class Git_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #Jenkins Course Schedule:
 class Jenkins_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 # Scripting Course schedule:
 
 class Python_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 
 class Django_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
  
 
 class Flask_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
     
 
 class Pandas_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 class Perl_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 
 class Ttcn3_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 # Telecom Course Schedule
 
 # LTE Protocol Development Course Schedule:
 class Ltepd_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
     
 
 
 # LTE Protocol Testing Course Schedule:
 class Ltept_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 # VOIP-SIP-IMS-Protocol Development:
 class Voip_Sip_Ims_Pd_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #VOIP-SIP-IMS-Protocol Testing:
 class Voip_Sip_Ims_Pt_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
-
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #Datacom Course Schedules:
 
 #L2L3 Protocol Development Course Schedule:
 class L2_L3_Pd_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-    
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 #L2 L3 Protocol Testing Course Schedule:
 class L2_L3_Pt_Course_Schedule(base_database):
     class Meta:
-        ordering = ["course_name","start_date","duration","faculty","demo"]
-
+        ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
 # Contact Form Course model:
 
