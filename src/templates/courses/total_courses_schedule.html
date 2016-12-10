@@ -33,33 +33,35 @@ tr:hover {
   <div class="title clearfix"> <img src="" alt="" class="fluid" width="32" height="32">
     <h3>Python Other Schedules</h3>
   </div>
-  
-<table border="1">
-     
-    <tr>
-    <th width="90">Date</th>
-    <th>Course Name</th>
-    <th>Batch Type</th>
-    <th>Time Duration</th>
-    <th>Batch Timings</th>
-    <th>Faculty</th><td></td>
-    </tr>
-    {% for i in property %}
-    
-    <tr>
-      
-      <td>{{ i.start_date }}</td>
-      <td> {{ i.course_name }}</td>
-      <td>{{ i.batchtype }}</td>
-      <td>{{ i.duration }}</td>
-      <td>{{ i.start_date }}</td>
-      <td>{{ i.faculty }}</td>
 
-    </tr>
-                                
-    {% endfor%}
-    </table>
+  <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+           
+          <tr>
+          <th width="90">Date</th>
+          <th>Course Name</th>
+          <th>Batch Type</th>
+          <th>Time Duration</th>
+          <th>Batch Timings</th>
+          <th>Faculty</th>
+          </tr>
+          {% for i in property %}
+          
+          <tr>
+            
+            <td>{{ i.start_date }}</td>
+            <td> {{ i.course_name }}</td>
+            <td>{{ i.batchtype }}</td>
+            <td>{{ i.duration }}</td>
+            <td>{{ i.start_date }}</td>
+            <td>{{ i.faculty }}</td>
+
+          </tr>
+                                      
+          {% endfor%}
+      </table>
   </div>
+</div>
 
 </section>
 {% endblock %}
