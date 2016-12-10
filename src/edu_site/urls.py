@@ -67,6 +67,7 @@ urlpatterns = [
 
     # services
     url(r'^services/','mysite.views.services',name='services'),
+    url(r'^services/#collapseTwo1','mysite.views.services',name='Consulting'),
     # other course timings
     url(r'^othertimings/','mysite.views.othertimings',name='othertimings'),
 

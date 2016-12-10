@@ -92,7 +92,11 @@
                                                     </h3>
                                                   </div>
 
+                                              {% if "/services/Consulting" in request.get_full_path %}
                                                   <div id="collapseOne1" class="panel-collapse collapse in">
+                                              {% else %}
+                                                  <div id="collapseOne1" class="panel-collapse collapse">
+                                              {% endif %}
                                                     <div class="panel-body">
                                                         <div class="media accordion-inner">
                                                                       <div class="pull-left">
