@@ -17,7 +17,7 @@ class Course_Popup_Window(models.Model):
 
 
 
-COLOR_CHOICES = (
+BATCH_CHOICES = (
     ('regular','REGULAR'),
     ('weekend', 'WEEKEND'),
     ('bootcamp','BOOTCAMP'),
@@ -31,7 +31,7 @@ class base_database(models.Model):
     schedlue'''
     course_name=models.CharField(max_length=256,null=True,blank=True)
     start_date=models.DateTimeField(null=True,blank=True)
-    batchtype=models.CharField(max_length=12, choices=COLOR_CHOICES, default='regular')
+    batchtype=models.CharField(max_length=24, choices=BATCH_CHOICES, default='regular')
     duration=models.CharField(max_length=256,null=True,blank=True)
     faculty=models.CharField(max_length=256,null=True,blank=True)
     demo = models.URLField(max_length=256,null=True,blank=True)
