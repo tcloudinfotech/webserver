@@ -131,7 +131,6 @@ class Ltepd_Course_Schedule(base_database):
         ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
     
 
-
 # LTE Protocol Testing Course Schedule:
 class Ltept_Course_Schedule(base_database):
     class Meta:

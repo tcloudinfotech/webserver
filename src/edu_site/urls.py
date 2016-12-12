@@ -68,8 +68,54 @@ urlpatterns = [
     # services
     url(r'^services/','mysite.views.services',name='services'),
     url(r'^services/#collapseTwo1','mysite.views.services',name='Consulting'),
-    # other course timings
-    url(r'^othertimings/','mysite.views.othertimings',name='othertimings'),
+    
+    # Other Schedules for Scripting:
+
+    url(r'^python_schedules/','mysite.views.python_schedules',name='python_schedules'),
+    url(r'^django_schedules/','mysite.views.django_schedules',name='django_schedules'),
+    url(r'^flask_schedules/','mysite.views.flask_schedules',name='flask_schedules'),
+    url(r'^pandas_schedules/','mysite.views.pandas_schedules',name='pandas_schedules'),
+    url(r'^perl_schedules/','mysite.views.perl_schedules',name='perl_schedules'),
+    url(r'^ttcn3_schedules/','mysite.views.ttcn3_schedules',name='ttcn3_schedules'),
+
+    # Other Schedules for Telecom:
+
+    url(r'^ltepd_schedules/','mysite.views.ltepd_schedules',name='ltepd_schedules'),
+    url(r'^ltept_schedules/','mysite.views.ltept_schedules',name='ltept_schedules'),
+    url(r'^voipsipimspd_schedules/','mysite.views.voipsipimspd_schedules',
+        name='voipsipimspd_schedules'),
+    url(r'^voipsipimspt_schedules/','mysite.views.voipsipimspt_schedules',
+        name='voipsipimspt_schedules'),
+    
+    # Other Schedules for Datacom:
+
+    url(r'^l2l3pd_schedules/','mysite.views.l2l3pd_schedules',name='l2l3pd_schedules'),
+    url(r'^l2l3pt_schedules/','mysite.views.l2l3pt_schedules',name='l2l3pt_schedules'),
+
+    # Other Schedules for Embeded:
+
+    url(r'^IOT_schedules/','mysite.views.IOT_schedules',name='IOT_schedules'),
+
+    # Other Schedules for Devops
+
+    url(r'^ansibel_schedules/','mysite.views.ansibel_schedules',name='ansibel_schedules'),
+    url(r'^dockers_schedules/','mysite.views.dockers_schedules',name='dockers_schedules'),
+    url(r'^chef_schedules/','mysite.views.chef_schedules',name='chef_schedules'),
+    url(r'^nagios_schedules/','mysite.views.nagios_schedules',name='nagios_schedules'),
+    url(r'^git_schedules/','mysite.views.ttcn3_schedules',name='ttcn3_schedules'),
+    url(r'^GIT_schedules/','mysite.views.GIT_schedules',name='GIT_schedules'),
+    url(r'^jenkins_schedules/','mysite.views.jenkins_schedules',name='jenkins_schedules'),
+
+    # Other Schedules for Cloud:
+
+    url(r'^openstack_schedules/','mysite.views.openstack_schedules',name='openstack_schedules'),
+    url(r'^AWS_schedules/','mysite.views.AWS_schedules',name='AWS_schedules'),
+
+
+
+
+
+
 
     
     

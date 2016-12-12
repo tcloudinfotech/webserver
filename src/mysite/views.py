@@ -290,12 +290,140 @@ def jenkins(request):
 
 
 
-# other timings
+# Other Schedules for Scripting:
 
-def othertimings(request):
+def python_schedules(request):
     property = Python_Course_Schedule.objects.all().order_by('-id')[:3]
     context = {'property': property}
-    return render(request,'courses/total_courses_schedule.html',context)
+    return render(request,'courses/schedules/scripting/python_schedules.html',context)
+
+def django_schedules(request):
+    property = Django_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/scripting/django_schedules.html',context)
+
+def flask_schedules(request):
+    property = Flask_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/scripting/python_schedules.html',context)
+
+def pandas_schedules(request):
+    property = Pandas_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/scripting/pandas_schedules.html',context)
+
+def perl_schedules(request):
+    property = Perl_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/scripting/perl_schedules.html',context)
+
+def ttcn3_schedules(request):
+    property = Ttcn3_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/scripting/python_schedules.html',context)
+
+# Telecom Other Schedules:
+
+def ltepd_schedules(request):
+    property = Ltepd_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/telecom/LTEPD_schedules.html',context)
+
+def ltept_schedules(request):
+    property = Ltept_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/telecom/LTEPT_schedules.html',context)
+
+def voipsipimspd_schedules(request):
+    property = Voip_Sip_Ims_Pd_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/telecom/VOIPSIPIMSPD_schedules.html',context)
+
+def voipsipimspt_schedules(request):
+    property = Voip_Sip_Ims_Pt_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/telecom/VOIPSIPIMSPT_schedules.html',context)
+
+# Datacom Other Schedules 
+
+def l2l3pd_schedules(request):
+    property = L2_L3_Pd_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/scheduels/datacom/L2L3PD_schedules.html',context)
+
+def l2l3pt_schedules(request):
+    property = L2_L3_Pt_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/datacom/L2L3PT_schedules.html',context)
+
+# Embeded Other Schedules
+
+def IOT_schedules(request):
+    property = Iot_Course_Schedule.objects.all().order_by('-id')[:3]
+    context = {'property': property}
+    return render(request,'courses/schedules/embeded/IOT_schedules.html',context)
+
+# Deveops Other Schedules:
+
+def ansibel_schedules(request):
+    property = Ansibel_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/ansibel_schedules.html',context)
+
+def dockers_schedules(request):
+    property = Dockers_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/dockers_schedules.html',context)
+
+def chef_schedules(request):
+    property = Chef_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/chef_schedules.html',context)
+
+def nagios_schedules(request):
+    property = Nagios_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/nagios_schedules.html',context)
+
+def GIT_schedules(request):
+    property = Git_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/GIT_schedules.html',context)
+
+def jenkins_schedules(request):
+    property = Jenkins_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/devops/jenkins_schedules.html',context)
+
+# Cloud other Schedules:
+
+def AWS_schedules(request):
+    property = Aws_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/cloud/AWS_schedules.html',context)
+
+def openstack_schedules(request):
+    property = Openstack_Course_Schedule.objects.all().order_by('-id')[:3]
+    context={'property': property}
+    return render(request,'courses/schedules/cloud/openstack_schedules.html',context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
