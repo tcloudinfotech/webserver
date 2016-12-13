@@ -66,8 +66,9 @@ urlpatterns = [
 
 
     # services
+    #url(r'^services/','mysite.views.services',name='services'),
+    url(r'^products/','mysite.views.products',name='products'),
     url(r'^services/','mysite.views.services',name='services'),
-    url(r'^services/#collapseTwo1','mysite.views.services',name='Consulting'),
     
     # Other Schedules for Scripting:
 

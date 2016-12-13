@@ -113,7 +113,12 @@ def aboutus(request):
 
 # services page
 def services(request):
-    return render(request,'services/services1.html',{})
+    context = {}
+    return render(request,'services/services1.html',context)
+
+def products(request):
+    context = {}
+    return render(request,'products/products.html',context)
 
 
 def embeded(request):
@@ -305,7 +310,7 @@ def django_schedules(request):
 def flask_schedules(request):
     property = Flask_Course_Schedule.objects.all().order_by('-id')[:3]
     context = {'property': property}
-    return render(request,'courses/schedules/scripting/python_schedules.html',context)
+    return render(request,'courses/schedules/scripting/flask_schedules.html',context)
 
 def pandas_schedules(request):
     property = Pandas_Course_Schedule.objects.all().order_by('-id')[:3]
@@ -320,7 +325,7 @@ def perl_schedules(request):
 def ttcn3_schedules(request):
     property = Ttcn3_Course_Schedule.objects.all().order_by('-id')[:3]
     context = {'property': property}
-    return render(request,'courses/schedules/scripting/python_schedules.html',context)
+    return render(request,'courses/schedules/scripting/TTCN3_schedules.html',context)
 
 # Telecom Other Schedules:
 

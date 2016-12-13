@@ -1,22 +1,14 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{# <nav class="main-menu">
-  <ul>
-	<li> <a>Classroom</a>
-      <ul class="nav-overflow">
-        <li><a href="3ds-max-training-course.html">Python</a></li>
-        <li><a href=".net-training-course.html">Telecom</a></li>
-        <li><a href="asp.net-training-course.html" class="left">Datacom</a></li>
-        <li><a href="c.net-training-course.html" class="left">Django</a></li>
-      </ul>
-    </li>
-</ul>
-</nav> #}
-<!-- /Master Nav -->
-{# </div>
-  </div>
-</div> #}
-<!-- /Slider -->
+{% block breadcrumb %} 
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><a href="{% url 'home' %}">Courses</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'scripting' %}">Scripting</a></li>
+    <li class="breadcrumb-item active"><a href="{% url 'python' %}">Python Programming</a></li>
+    <li class="breadcrumb-item active">Python Course Schedules
+
+ </ol>
+ {% endblock %}
 {% block content %} 
 <div class="clear padding40"></div>
 <!--<style type="text/css">
