@@ -354,7 +354,7 @@ def voipsipimspt_schedules(request):
 def l2l3pd_schedules(request):
     property = L2_L3_Pd_Course_Schedule.objects.all().order_by('-id')[:3]
     context = {'property': property}
-    return render(request,'courses/scheduels/datacom/L2L3PD_schedules.html',context)
+    return render(request,'courses/schedules/datacom/L2L3PD_schedules.html',context)
 
 def l2l3pt_schedules(request):
     property = L2_L3_Pt_Course_Schedule.objects.all().order_by('-id')[:3]
