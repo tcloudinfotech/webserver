@@ -23,23 +23,28 @@ def some_view(request):
     # file = open(r'C:/Python27/Scripts/src/documents/djangobook.pdf', "w+b")
     #path = os.path(r'C:/Python27/Scripts/src/documents/djangobook.pdf')
     try:
-        return FileResponse(open(r'C:/Python27/Scripts/src/documents/CSS3.pdf', 'rb'), content_type='application/pdf')
+        return FileResponse(open(r'C:/Python27/Scripts/src/documents/CSS3.pdf', 'rb'),
+         content_type='application/pdf')
     except :
         raise Http404()
 
 
 
 def my_fun(request):
-    return HttpResponse("hello django")
+    return HttpResponse("hello Tcloud")
 
 
 def Pop_Up_view(request):
     if request.method == 'POST':
         name=request.POST['name']
+        phone=request.POST['phone']
+        email=request.POST['email']
         print '******************************************',name
         course=request.POST['course']
         Course_Popup_Window.objects.create(
             name=name,
+            phone=phone,
+            email=email,
             course=course
         )
         return HttpResponse('')

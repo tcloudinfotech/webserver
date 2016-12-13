@@ -1,5 +1,6 @@
 from django import forms
 from mysite.models import *
+from mysite.models import *
 
 # our contact form
 class ContactEmailForm(forms.Form):
@@ -14,10 +15,14 @@ class ContactEmailForm(forms.Form):
 
 class Pop_Up_Form(forms.Form):
 	name=forms.CharField(required=True,label="Name")
+	phone=forms.CharField(required=True,label='Phone')
+	email=forms.EmailField(required=True,label='Email')
 	course=forms.CharField(required=True,label="Course")
 
 
 class ContactEmailForm_Popup(forms.Form):
-	name = forms.CharField(required=True)
- 	course = forms.CharField(required=True)
+	name = forms.CharField(required=True,label='Name')
+	phone=forms.CharField(required=True,label='Phone')
+	email=forms.EmailField(required=True,label='Email')
+ 	course = forms.CharField(required=True,label='Course')
 

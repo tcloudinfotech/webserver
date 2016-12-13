@@ -11,8 +11,10 @@ class File_upload(models.Model):
 
 class Course_Popup_Window(models.Model):
     name=models.CharField(max_length=256,null=True,blank=True)
-    course=models.CharField(max_length=256,null=True,blank=True)
     phone=models.CharField(max_length=256,null=True,blank=True)
+    email=models.EmailField(max_length=24,null=True,blank=True)
+    course=models.CharField(max_length=256,null=True,blank=True)
+    
 
 
 
