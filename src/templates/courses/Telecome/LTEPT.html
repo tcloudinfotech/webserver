@@ -380,7 +380,7 @@
                             </div>
                           </div>
 
-<div class="panel panel-default">
+                                                  <div class="panel panel-default">
                                                   <div class="panel-heading active">
                                                     <h3 class="panel-title">
                                                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight1">
@@ -409,7 +409,7 @@
     </div>
     <div class="row">
 
-        <div class="col-md-7">
+        <div class="col-md-10">
     
             <!-- Tab panes -->
             <div class="tab-content faq-cat-content">
@@ -442,7 +442,10 @@
                               <style >
                               .btn {
                                     border: 1px solid #949fa9;
+
                               }
+
+                              
                                 </style>
                          
                                 <div class="media-body">
@@ -461,7 +464,7 @@
                                    <button type="button" class="btn btn-xs">LTE Protocol Testing Training in Pune</button>
                                </div> 
                                 </div>
-                                     
+
                             </div> 
 
 <!--                                 <div class="panel-footer"> 
@@ -609,24 +612,22 @@
 
 <div class="col-md-4">
 
-                    <h2> Course Schedule</h2>
-                    <table class="table table-bordered" >
-                        {% for i in property %}
-                                <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
-                                <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
-                                <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
-                                <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
-                                <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
+  <h2> Course Schedule</h2>
+      <table class="table table-bordered" >
+          {% for i in property %}
+            <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
+            <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
+            <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
+            <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
+            <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
+          {% endfor%}
+      </table> 
 
+          <a class="btn btn-default" href="#" role="button">Join</a>
+          <a class="btn btn-default" href="{% url 'ltept_schedules' %}" role="button">Other Timings</a>
+         <button type="button" class="btn btn-primary" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
 
-                        {% endfor%}
-                    </table> 
-
-                      <a class="btn btn-default" href="#" role="button">Join</a>
-                      <a class="btn btn-default" href="{% url 'ltept_schedules' %}" role="button">Other Timings</a>
-                     <button type="button" class="btn btn-primary" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
-
-  </div>
+</div>
 
           </div>
         </div>
