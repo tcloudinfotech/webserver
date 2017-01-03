@@ -162,11 +162,14 @@ class L2_L3_Pt_Course_Schedule(base_database):
 # Contact Form Course model:
 
 # class Course_Database_Mail(models.Model):
-#     course=models.CharField(max_length=256,null=True,blank=True)
+#     course=models.CharField(max_length=256,null=True,blank=True,default="Telecom")
 
 #     def __unicode__(self):
 #         return self.course
 
 class Course_Database_Mail(base_database):
+    
+    def __unicode__(self):
+        return u'%s' %(self.course_name)
     class Meta:
         ordering = ["course_name"]
