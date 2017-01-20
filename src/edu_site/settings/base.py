@@ -127,8 +127,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "project_resource")
 
 
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='punnasnetworking@gmail.com'
-EMAIL_HOST_PASSWORD='9059894659'
+EMAIL_HOST_USER='web.tcloudit@gmail.com'
+EMAIL_HOST_PASSWORD='9666138555'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

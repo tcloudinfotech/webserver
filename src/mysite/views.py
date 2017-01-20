@@ -55,21 +55,20 @@ def Contact_View(request):
     form =ContactEmailForm(request.POST or None)
 
     if form.is_valid():
-
         email=form.cleaned_data.get('email')
         name=form.cleaned_data.get('name')
         phone=form.cleaned_data.get('phone')
         course=form.cleaned_data.get('course')
         message=form.cleaned_data.get('message')
-        subject='site contact form message'
+        subject='{} - {}'.format(name,course)
         from_email=settings.EMAIL_HOST_USER
-        to_email=[from_email]
+        to_email=[from_email, 'info@tcloudtech.com']
         contact_message='Email: %s\n Name:%s\n Course: %s\n Phone:%s\n Message: %s  ' %(email,name,course,phone,message)
         send_mail(subject,
                   contact_message,
                   from_email,
                   to_email,
-                  fail_silently=False)
+                  fail_silently=True)
 
         return redirect('/contact/')
 
@@ -84,7 +83,7 @@ def Contact_View_Popup(request):
         course=form.cleaned_data.get('course')
         contact_message = 'Name:%s\n Course: %s  ' % (name, course)
         from_email = settings.EMAIL_HOST_USER
-        to_email = [from_email]
+        to_email = [from_email, 'info@tcloudtech.com']
         subject = 'site contact form message'
         send_mail (subject,
                    contact_message,
