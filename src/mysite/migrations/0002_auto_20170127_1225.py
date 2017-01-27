@@ -7,13 +7,17 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('mysite', '0005_auto_20161210_1159'),
+        ('mysite', '0001_initial'),
     ]
 
     operations = [
+        migrations.RemoveField(
+            model_name='course_popup_window',
+            name='course_name',
+        ),
         migrations.AddField(
             model_name='course_popup_window',
-            name='email',
-            field=models.EmailField(max_length=24, null=True, blank=True),
+            name='course',
+            field=models.CharField(default=b'Python', max_length=256, null=True, blank=True),
         ),
     ]

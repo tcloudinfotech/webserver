@@ -7,9 +7,16 @@ from mysite.models import *
 class PersonAdmin(admin.ModelAdmin):
     list_display = ('course_name', 'start_date','duration','faculty','demo')
 
+class CourseAdmin(admin.ModelAdmin):
+    list_display = ('name', 'course','phone','email')
 
+    class Meta:
+        model = Course_Popup_Window()
+
+
+admin.site.register(Course)
 admin.site.register(File_upload)
-admin.site.register(Course_Database_Mail)
+admin.site.register(Course_Popup_Window,CourseAdmin)
 admin.site.register(Django_Course_Schedule,PersonAdmin)
 admin.site.register(Python_Course_Schedule,PersonAdmin)
 admin.site.register(Flask_Course_Schedule,PersonAdmin)
@@ -34,4 +41,4 @@ admin.site.register(Jenkins_Course_Schedule,PersonAdmin)
 # class CourseAdmin(admin.ModelAdmin):
 #     list_display = ('topic','content')
 
-# admin.site.register(Django_Subject_Details,CourseAdmin) 	
+# admin.site.register(Django_Subject_Details,CourseAdmin)

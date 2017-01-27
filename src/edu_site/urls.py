@@ -6,7 +6,9 @@ urlpatterns = [
     # url(r'^$', 'edu_site.views.home', name='home'),
     # url(r'^edu_site/', include('edu_site.urls')),
     url(r'^some_view/', 'mysite.views.some_view',name='some_view'),
+    # This is a view to fill the database entries in the database.
     url(r'^Pop_Up_view/', 'mysite.views.Pop_Up_view',name='Pop_Up_view'),
+    # This calls a view for sending the mail to our mail address.
     url(r'^Contact_View_Popup/', 'mysite.views.Contact_View_Popup',name='Contact_View_Popup'),
     url(r'^course_index/', 'mysite.views.course_index',name='course_index'),
     url(r'^courses/','mysite.views.courses',name='courses'),

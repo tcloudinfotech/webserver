@@ -360,6 +360,8 @@
 
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/material.min.js' %}"></script>
+
+<!-- Modal -->
 <script type="text/javascript">
 
     $(document).on('submit','#new_user_form',function (e) {
@@ -397,6 +399,8 @@
                 data:{
                     name:$('#name').val(),
                     course:$('#course').val(),
+                    phone:$('#phone').val(),
+                    email:$('#email').val(),
                     csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
                 },
                 success:function () {
@@ -415,6 +419,8 @@
                     data: {
                         name: $('#name').val(),
                         course: $('#course').val(),
+                        phone:$('#phone').val(),
+                        email:$('#email').val(),
                         csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                     },
                     success: function () {

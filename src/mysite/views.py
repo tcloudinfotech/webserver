@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render,redirect,render_to_response,RequestContext,HttpResponse
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
@@ -11,7 +12,6 @@ from django.core.mail import EmailMessage
 from django.template import Context
 from mysite.models import *
 from reportlab.pdfgen import canvas
-import os
 from wsgiref.util import FileWrapper
 from django.http import FileResponse, Http404
 from django.contrib.auth.decorators import login_required
@@ -29,27 +29,54 @@ def some_view(request):
         raise Http404()
 
 
-
 def my_fun(request):
     return HttpResponse("hello Tcloud")
 
 
+
+# COUSES PAGE POP UP - For database
+# The form data is getting populated in the database.
+
 def Pop_Up_view(request):
-    if request.method == 'POST':
-        name=request.POST['name']
-        phone=request.POST['phone']
-        email=request.POST['email']
-        print '******************************************',name
-        course=request.POST['course']
-        Course_Popup_Window.objects.create(
+    form = Pop_Up_Form(request.POST or None)
+    if form.is_valid():
+        name=form.cleaned_data['name']
+        phone=form.cleaned_data['phone']
+        email=form.cleaned_data['email']
+        # print '******************************************',name
+        course=form.cleaned_data['course']
+        Course_Popup_Window.objects.get_or_create(
             name=name,
             phone=phone,
             email=email,
-            course=course
+            course=course,
         )
-        return HttpResponse('')
+        return HttpResponseRedirect('')
+
+# COURSES PAGE POPUP FORM - for sending mails
+# This form is for sending the mail for us.
+
+def Contact_View_Popup(request):
+    form =ContactEmailForm_Popup(request.POST or None)
+    if form.is_valid():
+        name=form.cleaned_data.get('name')
+        course=form.cleaned_data.get('course')
+        email=form.cleaned_data.get('email')
+        phone=form.cleaned_data.get('phone')
+        contact_message = 'Email: %s\n Name:%s\n Course: %s\n Phone:%s\n' %(email,name,course,phone)
+        from_email = settings.EMAIL_HOST_USER
+        to_email = [from_email,'info@tcloudtech.com']
+        subject = '{} - {} - {}'.format(name,course,phone)
+        send_mail (subject,
+                   contact_message,
+                   to_email,
+                   fail_silently=False)
+        return redirect('/home/')
+    context={'form':form}
+    return render(request,'Telecome/LTEPD.html',context)
 
 
+ # ABOUT PAGE CONTACT FORM
 
 def Contact_View(request):
     form =ContactEmailForm(request.POST or None)
@@ -68,7 +95,8 @@ def Contact_View(request):
                   contact_message,
                   from_email,
                   to_email,
-                  fail_silently=True)
+                  fail_silently=False)
+        print contact_message
 
         return redirect('/contact/')
 
@@ -76,25 +104,8 @@ def Contact_View(request):
     return render(request,'Bootup/contact.html',context)
 
 
-def Contact_View_Popup(request):
-    form =ContactEmailForm_Popup(request.POST or None)
-    if form.is_valid():
-        name=form.cleaned_data.get('name')
-        course=form.cleaned_data.get('course')
-        contact_message = 'Name:%s\n Course: %s  ' % (name, course)
-        from_email = settings.EMAIL_HOST_USER
-        to_email = [from_email, 'info@tcloudtech.com']
-        subject = 'site contact form message'
-        send_mail (subject,
-                   contact_message,
-                   from_email,
-                   to_email,
-                   fail_silently=False)
-    return HttpResponse('')
 
 
-    # context = {'form': form}
-    # return render(request, 'testmail.html', context)
 
 def course_index(request):
     context={}
@@ -141,9 +152,9 @@ def telecom(request):
 def LTEPD(request):
     property = [Ltepd_Course_Schedule.objects.last()]
     context={'property': property}
-    return render(request,'courses/Telecome/LTEPD.html',context, 
+    return render(request,'courses/Telecome/LTEPD.html',context,
         context_instance=RequestContext(request))
-    
+
 
 
 def LTEPT(request):
@@ -353,7 +364,7 @@ def voipsipimspt_schedules(request):
     context = {'property': property}
     return render(request,'courses/schedules/telecom/VOIPSIPIMSPT_schedules.html',context)
 
-# Datacom Other Schedules 
+# Datacom Other Schedules
 
 def l2l3pd_schedules(request):
     property = L2_L3_Pd_Course_Schedule.objects.all().order_by('-id')[:3]
@@ -415,26 +426,3 @@ def openstack_schedules(request):
     property = Openstack_Course_Schedule.objects.all().order_by('-id')[:3]
     context={'property': property}
     return render(request,'courses/schedules/cloud/openstack_schedules.html',context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

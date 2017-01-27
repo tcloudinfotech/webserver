@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block title %} LTE Protocol Development Training in Hyderabad|Bangalore|Online {% endblock %}
 
-{% block breadcrumb %} 
+{% block breadcrumb %}
   <ol class="breadcrumb">
     <li class="breadcrumb-item active"><a href="{% url 'home' %}">Courses</a></li>
     <li class="breadcrumb-item active"><a href="{% url 'telecom' %}">Telecom</a></li>
@@ -10,7 +10,7 @@
  </ol>
 {% endblock %}
 
-{% block content%} 
+{% block content%}
 
 {#    <style type="text/css">#}
 {# .row1{#}
@@ -41,42 +41,43 @@
                     <div class="modal-content" >
                           <div class="modal-header">
                            <h4 class="modal-title" style="color: #20B8FF">User Register</h4>
-                               <button type="button" class="close" data-dismiss="modal">&nbsp;times;</button>
+                               <button type="button" class="close" data-dismiss="modal">&nbsp;</button>
                           </div>
 
                             <div class="mdl-card__supporting.txt" style="margin-left: 3%;">
                                   <form id="new_user_form" method="post">{% csrf_token %}
                                       <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
-                                          Name: <input type="text" id='name'    autofocus="autofocus">
-
+                                          Name: <input type="text" id='name' autofocus="autofocus">
                                       </div>
                                       </br>
+                                      <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
+                                          Phone: <input type="text" id='phone'  autofocus="autofocus">
+                                      </div>
+                                      </br>
+                                      <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
+                                          Email: <input type="text" id='email'  autofocus="autofocus">
+                                      </div>
+                                      </br>
+
                                       <div class="mdl-textfield mdl-js-textfield" >
                                           Course:<input type="text" id='course'>
-
                                       </div>
                                       </br>
                                           <div class="mdl-card__actions mdl-card- -border" style="margin-bottom: 5%;">
                                               <input type="submit" class="btn btn-info btn-sm" value="submit">
 
-
                                           </div>
-
                                   </form>
-
                            </div>
-
                   </div>
            </div>
 </div>
 
 </head>
 <body>
-
     <section id="middle">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-8 col-sm-6  wow fadeInDown">
                                           <div class="accordion">
                                               <h2>LTE Protocol Development</h2>
@@ -322,7 +323,7 @@
                                                   <div id="collapseEight1" class="panel-collapse collapse">
                                                     <div class="panel-body">
                                                         <div class="media accordion-inner">
-                                                              
+
                                                               <div class="media-body">
                                                                    <body><h4>General</h4>
                                                                    <style>
@@ -331,14 +332,14 @@
                                                                    }
                                                                    h5{
                                                                     color:purple;
-                                                                   }</style></body> 
-                                                                  
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                   }</style></body>
+
+                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
                                                                    MCA/MSC                          </p>
-                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
@@ -353,15 +354,15 @@
                                                                    }
                                                                    h5{
                                                                     color:purple;
-                                                                   }</style></body> 
-                                                                  
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                   }</style></body>
+
+                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
                                                                    MCA/MSC                          </p>
 
-                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
@@ -375,15 +376,15 @@
                                                                    }
                                                                    h5{
                                                                     color:purple;
-                                                                   }</style></body> 
-                                                                  
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                   }</style></body>
+
+                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
                                                                    MCA/MSC                          </p>
 
-                                                                    <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>    
+                                                                    <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
                                                                    <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
                                                                    M.Tech/ME<br>&nbsp;&nbsp;
                                                                    MS<br>&nbsp;&nbsp;
@@ -402,8 +403,8 @@
                     <li class="btn"><a href="#">Cloud Computing</a></li>
                     <li class="btn"><a href="#">OpenStack</a></li>
                   </ul>
-                  
-                 
+
+
 
                                                               </div>
                                                         </div>
@@ -414,7 +415,7 @@
 
                                               </div>
                                           </div>
-                </div>  
+                </div>
 
 <div class="col-md-4">
 
@@ -429,7 +430,7 @@
 
 
                         {% endfor%}
-                    </table> 
+                    </table>
 
                      <a class="btn btn-default" href="#" role="button">Join</a>
                      <a class="btn btn-default" href="{% url 'ltepd_schedules' %}" role="button">Other Timings</a>
@@ -556,8 +557,3 @@
     </body>
 </html>
 {% endblock %}
-
-
-
-
-

@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class File_upload(models.Model):
     #upload_to='documents/%Y/%m/%d' argument
     files = models.FileField()
@@ -8,15 +9,34 @@ class File_upload(models.Model):
     def __unicode__(self):
         return unicode(self.files) or u''
 
+# Main datbase for Courses. All tables will pick the course details from this table.
+
+class Course(models.Model):
+    course_name = models.CharField(max_length=256, primary_key=True)
+
+    def __unicode__(self):
+        return unicode(self.course_name) or u''
+
+# Contact Form Course model:
+# class Course_Database_Mail(models.Model):
+#     ContactCourseName=models.ForeignKey(Course, related_name='ContactCourse')
+
+#     def __unicode__(self):
+#         return unicode(self.ContactCourseName) or u''
+
+    # def __unicode__(self):
+    #     return u'%s' %(self.course_name)
+    # class Meta:
+    #     ordering = ["course_name"]
 
 class Course_Popup_Window(models.Model):
     name=models.CharField(max_length=256,null=True,blank=True)
     phone=models.CharField(max_length=256,null=True,blank=True)
     email=models.EmailField(max_length=24,null=True,blank=True)
-    course=models.CharField(max_length=256,null=True,blank=True)
-    
+    course=models.CharField(max_length=256,null=True,blank=True, default='Python')
 
-
+    def __unicode__(self):
+        return u'%s,%s,%s,%s' %(self.name,self.course,self.phone,self.email)
 
 
 BATCH_CHOICES = (
@@ -28,11 +48,12 @@ BATCH_CHOICES = (
 )
 # Course Schedule models
 
+
 class base_database(models.Model):
     '''base model for course
     schedlue'''
-    course_name=models.CharField(max_length=256,null=True,blank=True)
-    start_date=models.DateTimeField(null=True,blank=True)
+    course_name=models.ForeignKey(Course)
+    start_date=models.DateTimeField(null=True,blank=True, auto_now_add=False,)
     batchtype=models.CharField(max_length=24, choices=BATCH_CHOICES, default='regular')
     duration=models.CharField(max_length=256,null=True,blank=True)
     faculty=models.CharField(max_length=256,null=True,blank=True)
@@ -41,6 +62,7 @@ class base_database(models.Model):
     def __unicode__(self):
         return u'%s,%s,%s,%s,%s' %(self.course_name,self.start_date,self.duration,
             self.faculty,self.demo)
+
 
 
 #Cloud Course Schedule:
@@ -105,12 +127,12 @@ class Python_Course_Schedule(base_database):
 class Django_Course_Schedule(base_database):
     class Meta:
         ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
- 
+
 
 class Flask_Course_Schedule(base_database):
     class Meta:
         ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
-    
+
 
 class Pandas_Course_Schedule(base_database):
     class Meta:
@@ -131,7 +153,7 @@ class Ttcn3_Course_Schedule(base_database):
 class Ltepd_Course_Schedule(base_database):
     class Meta:
         ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
-    
+
 
 # LTE Protocol Testing Course Schedule:
 class Ltept_Course_Schedule(base_database):
@@ -159,17 +181,10 @@ class L2_L3_Pt_Course_Schedule(base_database):
     class Meta:
         ordering = ["course_name","start_date","batchtype","duration","faculty","demo"]
 
-# Contact Form Course model:
+
 
 # class Course_Database_Mail(models.Model):
 #     course=models.CharField(max_length=256,null=True,blank=True,default="Telecom")
 
 #     def __unicode__(self):
 #         return self.course
-
-class Course_Database_Mail(base_database):
-    
-    def __unicode__(self):
-        return u'%s' %(self.course_name)
-    class Meta:
-        ordering = ["course_name"]

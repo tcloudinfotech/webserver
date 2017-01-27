@@ -14,12 +14,17 @@ class Migration(migrations.Migration):
             name='base_database',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('course_name', models.CharField(max_length=256, null=True, blank=True)),
                 ('start_date', models.DateTimeField(null=True, blank=True)),
-                ('batchtype', models.CharField(default=b'regular', max_length=12, choices=[(b'regular', b'REGULAR'), (b'weekend', b'WEEKEND'), (b'bootcamp', b'BOOTCAMP'), (b'online', b'ONLINE'), (b'fasttrack', b'FASTTRACK')])),
+                ('batchtype', models.CharField(default=b'regular', max_length=24, choices=[(b'regular', b'REGULAR'), (b'weekend', b'WEEKEND'), (b'bootcamp', b'BOOTCAMP'), (b'online', b'ONLINE'), (b'fasttrack', b'FASTTRACK')])),
                 ('duration', models.CharField(max_length=256, null=True, blank=True)),
                 ('faculty', models.CharField(max_length=256, null=True, blank=True)),
                 ('demo', models.URLField(max_length=256, null=True, blank=True)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Course',
+            fields=[
+                ('course_name', models.CharField(max_length=256, serialize=False, primary_key=True)),
             ],
         ),
         migrations.CreateModel(
@@ -27,8 +32,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=256, null=True, blank=True)),
-                ('course', models.CharField(max_length=256, null=True, blank=True)),
                 ('phone', models.CharField(max_length=256, null=True, blank=True)),
+                ('email', models.EmailField(max_length=24, null=True, blank=True)),
+                ('course_name', models.ForeignKey(to='mysite.Course')),
             ],
         ),
         migrations.CreateModel(
@@ -65,16 +71,6 @@ class Migration(migrations.Migration):
             ],
             options={
                 'ordering': ['course_name', 'start_date', 'batchtype', 'duration', 'faculty', 'demo'],
-            },
-            bases=('mysite.base_database',),
-        ),
-        migrations.CreateModel(
-            name='Course_Database_Mail',
-            fields=[
-                ('base_database_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='mysite.base_database')),
-            ],
-            options={
-                'ordering': ['course_name'],
             },
             bases=('mysite.base_database',),
         ),
@@ -257,5 +253,10 @@ class Migration(migrations.Migration):
                 'ordering': ['course_name', 'start_date', 'batchtype', 'duration', 'faculty', 'demo'],
             },
             bases=('mysite.base_database',),
+        ),
+        migrations.AddField(
+            model_name='base_database',
+            name='course_name',
+            field=models.ForeignKey(to='mysite.Course'),
         ),
     ]
