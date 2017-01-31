@@ -8,7 +8,7 @@ from django.core.mail import send_mail
 from .forms import ContactEmailForm,ContactEmailForm_Popup
 from django.shortcuts import render
 from django.template.loader import get_template
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, send_mass_mail
 from django.template import Context
 from mysite.models import *
 from reportlab.pdfgen import canvas
@@ -64,16 +64,16 @@ def Contact_View_Popup(request):
         email=form.cleaned_data.get('email')
         phone=form.cleaned_data.get('phone')
         contact_message = 'Email: %s\n Name:%s\n Course: %s\n Phone:%s\n' %(email,name,course,phone)
+        #print contact_message
         from_email = settings.EMAIL_HOST_USER
-        to_email = [from_email,'info@tcloudtech.com']
+        #print from_email
+        to_email = [from_email, 'info@tcloudtech.com']
         subject = '{} - {} - {}'.format(name,course,phone)
-        send_mail (subject,
-                   contact_message,
-                   to_email,
-                   fail_silently=False)
-        return redirect('/home/')
-    context={'form':form}
-    return render(request,'Telecome/LTEPD.html',context)
+        #print subject
+        send_mail(subject, pop_message, to_email, fail_silently=True)
+        print send_mail
+        return HttpResponseRedirect('/course/')
+
 
 
  # ABOUT PAGE CONTACT FORM
