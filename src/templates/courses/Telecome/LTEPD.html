@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block title %} LTE Protocol Development Training in Hyderabad|Bangalore|Online {% endblock %}
 
-{% block breadcrumb %}
+{% block breadcrumb %} 
   <ol class="breadcrumb">
     <li class="breadcrumb-item active"><a href="{% url 'home' %}">Courses</a></li>
     <li class="breadcrumb-item active"><a href="{% url 'telecom' %}">Telecom</a></li>
@@ -10,7 +10,7 @@
  </ol>
 {% endblock %}
 
-{% block content%}
+{% block content%} 
 
 {#    <style type="text/css">#}
 {# .row1{#}
@@ -30,6 +30,14 @@
 
     position: relative;
 }
+.btn {
+                        border: 1px solid #949fa9;
+                        white-space:normal !important;
+                        word-wrap:break-word;
+                  }
+   
+.btn-xs-tcloud{
+  padding:1px 5px;font-size:10px;font-weight: 400;line-height:1.5;border-radius:3px}
 
 </style>
 <html>
@@ -41,276 +49,284 @@
                     <div class="modal-content" >
                           <div class="modal-header">
                            <h4 class="modal-title" style="color: #20B8FF">User Register</h4>
-                               <button type="button" class="close" data-dismiss="modal">&nbsp;</button>
+                               <button type="button" class="close" data-dismiss="modal">&nbsp;times;</button>
                           </div>
 
                             <div class="mdl-card__supporting.txt" style="margin-left: 3%;">
                                   <form id="new_user_form" method="post">{% csrf_token %}
                                       <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
-                                          Name: <input type="text" id='name' autofocus="autofocus">
-                                      </div>
-                                      </br>
-                                      <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
-                                          Phone: <input type="text" id='phone'  autofocus="autofocus">
-                                      </div>
-                                      </br>
-                                      <div class="mdl-textfield mdl-js-textfield" style="margin-top:3%; ">
-                                          Email: <input type="text" id='email'  autofocus="autofocus">
-                                      </div>
-                                      </br>
+                                          Name: <input type="text" id='name'    autofocus="autofocus">
 
+                                      </div>
+                                      </br>
                                       <div class="mdl-textfield mdl-js-textfield" >
                                           Course:<input type="text" id='course'>
+
                                       </div>
                                       </br>
                                           <div class="mdl-card__actions mdl-card- -border" style="margin-bottom: 5%;">
                                               <input type="submit" class="btn btn-info btn-sm" value="submit">
 
+
                                           </div>
+
                                   </form>
+
                            </div>
+
                   </div>
            </div>
 </div>
 
 </head>
+
 <body>
-    <section id="middle">
+
+<section id="middle">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-6  wow fadeInDown">
-                                          <div class="accordion">
-                                              <h2>LTE Protocol Development</h2>
-                                              <div class="panel-group" id="accordion1">
-                                                <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
-                                                        OSI/TCP-IP Fundamentals
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+               <div class="col-sm-8 wow fadeInDown">
+                    <div class="accordion">
+                        <h2>LTE Protocol Testing</h2>
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  OSI/TCP-IP Fundamentals
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseOne1" class="panel-collapse collapse in">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                                      <div class="pull-left">
-                                                                          <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                                      </div>
-                                                              <div class="media-body">
-                                                                   <h4>IP Communication Fundamentals :</h4>
-                                                                   <p>This module is desigened for getting expertise in IP Communications.</br>
-                                                                    1. OSI Introduction</br>
-                                                                    2. DataLink: Ethernet, PPP, ATM, FR, 802.11, ARP,RARP</br>
-                                                                    3. NetworK: IPv4, IPv6, ICMP</br>
-                                                                    4. Transport: TCP, UDP, SCTP</br>
-                                                                    5. Session: RTP,RTCP</br>
-                                                                    6. Presentation: SSLv3</br>
-                                                                    7. Application: HTTP, HTTPS, FTP, SFTP, TFTP, SSH, Telnet, DNS, DHCP</br>
-                                                                    8. Tools : Wireshark, GNS3, Cisco Packet Tracer </p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>IP Communication Fundamentals :</h4>
+                                             <p>This module is desigened for getting expertise in IP Communications.<br>
+                                              1. OSI Introduction<br>
+                                              2. DataLink: Ethernet, PPP, ATM, FR, 802.11, ARP,RARP<br>
+                                              3. NetworK: IPv4, IPv6, ICMP<br>
+                                              4. Transport: TCP, UDP, SCTP<br>
+                                              5. Session: RTP,RTCP<br>
+                                              6. Presentation: SSLv3<br>
+                                              7. Application: HTTP, HTTPS, FTP, SFTP, TFTP, SSH, Telnet, DNS, DHCP<br>
+                                              8. Tools : Wireshark, GNS3, Cisco Packet Tracer </p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
-                                                        2G &nbsp; 2.5G Fundamentals
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  2G & 2.5G Fundamentals
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseTwo1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>GSM/GPRS Fundamentals :</h4>
-                                                                   <p>This module's goal is to get Basic understanding of Telecom Networks.<br>
-                                                                    1. Introduction to Telecommunications<br>
-                                                                    2. 2G Introduction<br>
-                                                                    3. Functional Study on 2G Network Components : MS, BTS, BSC, MSC, GMSC, MSC/VLR, HLR, AUC, EIR<br>
-                                                                    4. GSM Call Flows<br>
-                                                                    5. Introduction to Packet Networks: GPRS<br>
-                                                                    6. Functional Study on 2.5 Network Elements : SGSN, GGSN<br>
-                                                                    7. GPRS Call Flows</p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>GSM/GPRS Fundamentals :</h4>
+                                             <p>This module's goal is to get Basic understanding of Telecom Networks.<br>
+                                              1. Introduction to Telecommunications<br>
+                                              2. 2G Introduction<br>
+                                              3. Functional Study on 2G Network Components : MS, BTS, BSC, MSC, GMSC, MSC/VLR, HLR, AUC, EIR<br>
+                                              4. GSM Call Flows<br>
+                                              5. Introduction to Packet Networks: GPRS<br>
+                                              6. Functional Study on 2.5 Network Elements : SGSN, GGSN<br>
+                                              7. GPRS Call Flows</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
-                                                        3G &nbsp;3.5G Fundamentals
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  3G & 3.5G Fundamentals
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseThree1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>UMTS &nbsp; HSPA Fundamentals : </h4>
-                                                                   <p>This module's goal is to get basic understanding on 3G Network.<br>
-                                                                1. Introduction to UMTS Network <br>
-                                                                2. Functional Study on 3G Network Components : UE, NodeB, RNC, MSC, GMSC, MSC/VLR, HLR, AUC, EIR<br>
-                                                                3. UMTS call Flows<br>
-                                                                4. Introduction to HSPA Tecchnology (3.5G)<br>
-                                                                5. Introduction to Tunnelling Concepts (GRE, GTP)</p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>UMTS & HSPA Fundamentals : </h4>
+                                             <p>This module's goal is to get basic understanding on 3G Network.<br>
+                                              1. Introduction to UMTS Network <br>
+                                              2. Functional Study on 3G Network Components : UE, NodeB, RNC, MSC, GMSC, MSC/VLR, HLR, AUC, EIR<br>
+                                              3. UMTS call Flows<br>
+                                              4. Introduction to HSPA Tecchnology (3.5G)<br>
+                                              5. Introduction to Tunnelling Concepts (GRE, GTP)</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
-                                                        LTE : Long Term Evolution
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  LTE : Long Term Evolution
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseFour1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>Long Term Evolution - LTE :</h4>
-                                                                   <p>This module is desigened for getting expertise in LTE Technology<br>
-                                                                    1. Evolution of LTE Technology &nbsp; Introduction<br>
-                                                                    2. Introduction of LTE Network Elements : Ue, eNB, MME, HSS, SGW, PGW, PCRF<br>
-                                                                    3. Introduction to LTE Protocols:  <br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            Radio: OFDMA/SC-FDMA, MAC, RLC, PDCP, RRC, NAS <br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            Core: X2-AP, S1-AP, GTP-C, GTP-U, Diameter<br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            LTE Convergence: MIPv4, PMIPv6, GRE, SGS-AP<br>
-                                                                    4. LTE Terminology<br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            States: EMM, ECM, RRC <br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            Bearers: EPS, Radio, S1, S5-S8, External <br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            IDs: IMSI, IMEI, GUTI, RNTIs, S1AP-UEIDs, TEIDs <br> &nbsp;nbsp &nbsp;nbsp &nbsp;nbsp;
-                                                                            QoS: QCI, ARP, GBR, NGBR, AMBR <br>
-                                                                    5. Functional Study of all LTE Protocols <br>
-                                                                    6. LTE Call Flows &nbsp; Log Analysis </p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Long Term Evolution - LTE :</h4>
+                                             <p>This module is desigened for getting expertise in LTE Technology<br>
+                                              1. Evolution of LTE Technology & Introduction<br>
+                                              2. Introduction of LTE Network Elements : Ue, eNB, MME, HSS, SGW, PGW, PCRF<br>
+                                              3. Introduction to LTE Protocols:  <br> &nbsp &nbsp &nbsp;
+                                                      Radio: OFDMA/SC-FDMA, MAC, RLC, PDCP, RRC, NAS <br> &nbsp &nbsp &nbsp;
+                                                      Core: X2-AP, S1-AP, GTP-C, GTP-U, Diameter<br> &nbsp &nbsp &nbsp;
+                                                      LTE Convergence: MIPv4, PMIPv6, GRE, SGS-AP<br>
+                                              4. LTE Terminology<br> &nbsp &nbsp &nbsp;
+                                                      States: EMM, ECM, RRC <br> &nbsp &nbsp &nbsp;
+                                                      Bearers: EPS, Radio, S1, S5-S8, External <br> &nbsp &nbsp &nbsp;
+                                                      IDs: IMSI, IMEI, GUTI, RNTIs, S1AP-UEIDs, TEIDs <br> &nbsp &nbsp &nbsp;
+                                                      QoS: QCI, ARP, GBR, NGBR, AMBR <br>
+                                              5. Functional Study of all LTE Protocols <br>
+                                              6. LTE Call Flows & Log Analysis </p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                                          <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
-                                                        Advanced LTE
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                                                    <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive1">
+                                  Advanced LTE
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseFive1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>LTE Advanced :</h4>
-                                                                   <p>This module is desigened for getting expertise in Advanced LTE<br>
-                                                                      1. Introduction to Advanced LTE Features<br>
-                                                                      2. MIMO : Multiple Input Multiple Output<br>
-                                                                      3. SON: Self Optimized Networks<br>
-                                                                      4. Carrier Aggregation<br>
-                                                                      5. eMBMS: enhanced Multimedia Broadcast and Multicast System <br>
-                                                                      6. Femto Cells, Home eNBs </p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseFive1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>LTE Advanced :</h4>
+                                             <p>This module is desigened for getting expertise in Advanced LTE<br>
+                                              1. Introduction to Advanced LTE Features<br>
+                                              2. MIMO : Multiple Input Multiple Output<br>
+                                              3. SON: Self Optimized Networks<br>
+                                              4. Carrier Aggregation<br>
+                                              5. eMBMS: enhanced Multimedia Broadcast and Multicast System <br>
+                                              6. Femto Cells, Home eNBs </p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                                          <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix1">
-                                                        IMS: IP Multimedia Sub-System
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                                                    <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix1">
+                                  IMS: IP Multimedia Sub-System
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseSix1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>VOIP - SIP - IMS :</h4>
-                                                                   <p>This module is desigened for getting expertise in IMS<br>
-                                                                    1. Voice Over IP (VOIP) Introduction<br>
-                                                                    2. Session Intiation Protocol (SIP) &nbsp; Session Description Protocol (SDP)<br>
-                                                                    3. Real-Time Transport Protocol (RTP) &nbsp; Real-Time Transport Control Protocol(RTCP)<br>
-                                                                    4. Voice Solutions in LTE: CSFB<br>
-                                                                    5. Voice Solutions in LTE: IMS Introduction<br>
-                                                                    6. Funtional study of IMS Network Elements<br>
-                                                                    7. IMS Protocol study: SIP &nbsp; Diameter<br>
-                                                                    8. IMS Call Flows &nbsp; Log Analysis </p>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
+                            <div id="collapseSix1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>VOIP - SIP - IMS :</h4>
+                                             <p>This module is desigened for getting expertise in IMS<br>
+                                              1. Voice Over IP (VOIP) Introduction<br>
+                                              2. Session Intiation Protocol (SIP) & Session Description Protocol (SDP)<br>
+                                              3. Real-Time Transport Protocol (RTP) & Real-Time Transport Control Protocol(RTCP)<br>
+                                              4. Voice Solutions in LTE: CSFB<br>
+                                              5. Voice Solutions in LTE: IMS Introduction<br>
+                                              6. Funtional study of IMS Network Elements<br>
+                                              7. IMS Protocol study: SIP & Diameter<br>
+                                              8. IMS Call Flows & Log Analysis </p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
-                                                                          <div class="panel panel-default">
-                                                  <div class="panel-heading active">
-                                                    <h3 class="panel-title">
-                                                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven1">
-                                                        LTE IMS Protocol Development
-                                                        <i class="fa fa-angle-right pull-right"></i>
-                                                      </a>
-                                                    </h3>
-                                                  </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven1">
+                                  LTE IMS Protocol Testing
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
 
-                                                  <div id="collapseSeven1" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <div class="media accordion-inner">
-                                                              <div class="pull-left">
-                                                                  <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
-                                                              </div>
-                                                              <div class="media-body">
-                                                                   <h4>Protocol Developement Practicles :</h4>
-                                                                   <p>This module is desigened for getting expertise in Protocol Development<br>
-                                                                    1. Protocol Development Introduction<br>
-                                                                    2. Protocol State Machine Development<br>
-                                                                    3. Protocol Logic Implementation<br>
-                                                                    4. Protocol Coder/Decoder (CoDec) Development<br>
-                                                                    5. Protocol Socket Programming /Trasport Module Development <br>
-                                                                    6. Code Management  using SubVersioN (SVN)</p>
+                            <div id="collapseSeven1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="{% static 'images/accordion1.png' %}">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Protocol Testing Practicles :</h4>
+                                             <p>This module is desigened for getting expertise in Protocol Testing<br>
+                                              1. Protocol Testing Introduction<br>
+                                              2. Introduction to Script Based Protocol Testing<br>
+                                              3. Scripting Language learning: TTCN3 - Testing And Test Control Notation 3 <br>
+                                              4. Test Script development using TTCN3 <br>
+                                              5. LTE/IMS Test Execution on Elveior TestCast <br>
+                                              6. Introduction to Tool Based Protocol Testing <br>
+                                              7. Test Sequence Generation on Protocol Testing Tools<br>
+                                              8. Test Sequence Execution on <br> &nbsp &nbsp &nbsp;
+                                                      TCLOUD LTE Functional Tester <br> &nbsp &nbsp &nbsp;
+                                                      TCLOUD LTE LOAD Tester <br> &nbsp &nbsp &nbsp;
+                                              9. Protocol Testing Asspects <br> &nbsp &nbsp &nbsp;
+                                                      Bug Reporting and Bug Life cycle <br> &nbsp &nbsp &nbsp;
+                                                      Test Management Tool: Quality Centre <br> &nbsp &nbsp &nbsp;
+                                                      Code Management : SubVersioN (SVN) </p>
 
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                    <div class="panel panel-default">
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                                                  <div class="panel panel-default">
                                                   <div class="panel-heading active">
                                                     <h3 class="panel-title">
                                                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseEight1">
@@ -323,89 +339,1114 @@
                                                   <div id="collapseEight1" class="panel-collapse collapse">
                                                     <div class="panel-body">
                                                         <div class="media accordion-inner">
-
+                                                              
                                                               <div class="media-body">
-                                                                   <body><h4>General</h4>
-                                                                   <style>
-                                                                   h4{
-                                                                    color:green;
-                                                                   }
-                                                                   h5{
-                                                                    color:purple;
-                                                                   }</style></body>
+                                                                  
 
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
-                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
+      <div class="container-fluid">  
+            <div class="row">
+             <!-- Nav tabs category -->
+              <ul class="nav nav-tabs faq-cat-tabs">
+            <li class="active"><a href="#faq-cat-1" data-toggle="tab">General</a></li>
+            <li><a href="#faq-cat-2" data-toggle="tab">Technical</a></li>
+            <li><a href="#faq-cat-6" data-toggle="tab">Tcloud</a></li>
+              </ul>       
+            </div>
 
-
-
-                                                                   <body><h4>Technical</h4>
-                                                                   <style>
-                                                                   h4{
-                                                                    color:green;
-                                                                   }
-                                                                   h5{
-                                                                    color:purple;
-                                                                   }</style></body>
-
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
-
-                                                                   <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
-
-
-                                                                   <body><h4>Tcloud</h4>
-                                                                   <style>
-                                                                   h4{
-                                                                    color:green;
-                                                                   }
-                                                                   h5{
-                                                                    color:purple;
-                                                                   }</style></body>
-
-                                                                   <h5> 1.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
-
-                                                                    <h5> 2.What is the Educational Qualification for LTE Protocol Development? </h5>
-                                                                   <p>&nbsp;&nbsp;&nbsp;B.Tech/BE<br>&nbsp;&nbsp;
-                                                                   M.Tech/ME<br>&nbsp;&nbsp;
-                                                                   MS<br>&nbsp;&nbsp;
-                                                                   MCA/MSC                          </p>
-
-                  <h4>Tags:</h4>
-                  <ul class="tag clearfix">
-                    <li class="btn"><a href="#">LTE</a></li>
-                    <li class="btn"><a href="#">IMS</a></li>
-                    <li class="btn"><a href="#">SIP</a></li>
-                    <li class="btn"><a href="#">Routing</a></li>
-                    <li class="btn"><a href="#">Switching</a></li>
-                    <li class="btn"><a href="#">TTCN3</a></li>
-                    <li class="btn"><a href="#">Python</a></li>
-                    <li class="btn"><a href="#">IOT</a></li>
-                    <li class="btn"><a href="#">Cloud Computing</a></li>
-                    <li class="btn"><a href="#">OpenStack</a></li>
-                  </ul>
+            <div class="row">
+        <div class="col-md-16">
+   
+            <!-- Tab panes -->
+            <div class="tab-content faq-cat-content">
+                <div class="tab-pane active in fade" id="faq-cat-1">
+                    <div class="panel-group" id="accordion-cat-1">
+<div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-1">
+                                    <h4 class="panel-title">
+                                        1.What is the Educational Qualification for LTE Protocol Development?             
+                                      
+                                        <span class="pull-right">
+                                            
+                                       
+                                                       
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
 
 
+                  
+                   <!-- <div class="media-body"> -->
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>             
+                    </div>
+                  </div>
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
+                                    <h4 class="panel-title">
+                                        2.What is the Educational Qualification for LTE Protocol Development?             
+                                      
+                                        <span class="pull-right">
+                                            
+                                       
+                                                       
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
 
+
+                  
+                   <!-- <div class="media-body"> -->
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>             
+                    </div>
+                  </div>
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
+                                    <h4 class="panel-title">
+                                        3.What is the Educational Qualification for LTE Protocol Development?             
+                                        <span class="pull-right">         
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div>
+                </div>
+
+                    <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-4">
+                                    <h4 class="panel-title">
+                                        4.What is the Educational Qualification for LTE Protocol Development?             
+                                      
+                                        <span class="pull-right">                           
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div> 
+                </div>
+
+                   <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-5">
+                                    <h4 class="panel-title">
+                                        5.What is the Educational Qualification for LTE Protocol Development?             
+                                        <span class="pull-right">
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div>     
+               </div>
+
+               <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-6">
+                                    <h4 class="panel-title">
+                                        6.What is the Educational Qualification for LTE Protocol Development?                       
+                                        <span class="pull-right">
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div> 
+                </div>
+
+                    <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-7">
+                                    <h4 class="panel-title">
+                                        7.What is the Educational Qualification for LTE Protocol Development?             
+                                      
+                                        <span class="pull-right">                           
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div>            
+                </div>
+                <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-8">
+                                    <h4 class="panel-title">
+                                        8.What is the Educational Qualification for LTE Protocol Development?             
+                                        <span class="pull-right">
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div>  
+                </div>
+
+                     <div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-9">
+                                    <h4 class="panel-title">
+                                        9.What is the Educational Qualification for LTE Protocol Development?                       
+                                        <span class="pull-right">
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-9" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>
+                  </div> 
+                 </div>
+<div class="panel panel-default panel-faq">
+                            <div class="panel-heading1">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-10">
+                                    <h4 class="panel-title">
+                                        10.What is the Educational Qualification for LTE Protocol Development?             
+                                      
+                                        <span class="pull-right">
+                                            
+                                       
+                                                       
+                                           <i class="glyphicon glyphicon-plus"></i> 
+                                        </span>
+                                    </h4>
+                                </a>
+                            </div>
+                <div id="faq-cat-1-sub-10" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        B.Tech/BE<br>
+                        M.Tech/ME<br>
+                        MS<br>
+                        MCA/MSC<br>
+                    </div>
+
+
+                  
+                   <!-- <div class="media-body"> -->
+                     <div class="panel-body-lower">
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                      </div>             
+                    </div>
+                  </div>
+                    </div>
+                  </div>
+                <div class="tab-pane fade" id="faq-cat-2">
+                    <div class="panel-group" id="accordion-cat-2">
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-1">
+                                    <h4 class="panel-title">
+                                        1.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                        
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-2">
+                                    <h4 class="panel-title">
+                                        2.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower ">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-3">
+                                    <h4 class="panel-title">
+                                        3.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-4">
+                                    <h4 class="panel-title">
+                                        4.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-5">
+                                    <h4 class="panel-title">
+                                        5.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+<button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-6">
+                                    <h4 class="panel-title">
+                                        6.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-6" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-7">
+                                    <h4 class="panel-title">
+                                        7.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-7" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                            </div>
+                          </div>
+                        </div>
+
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-8">
+                                    <h4 class="panel-title">
+                                        8.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-8" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-9">
+                                    <h4 class="panel-title">
+                                        9.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-9" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-10">
+                                    <h4 class="panel-title">
+                                        10.What is the Educational Qualification for LTE Protocol Development?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-2-sub-10" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                <div class="tab-pane fade" id="faq-cat-6">
+                    <div class="panel-group" id="accordion-cat-6">
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-1">
+                                    <h4 class="panel-title">
+                                        1.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                               </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-6-sub-2">
+                                    <h4 class="panel-title">
+                                        2.What is the Educational Qualification needed before joining tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower ">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-3">
+                                    <h4 class="panel-title">
+                                        3.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-4">
+                                    <h4 class="panel-title">
+                                        4.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-5">
+                                    <h4 class="panel-title">
+                                        5.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-6">
+                                    <h4 class="panel-title">
+                                        6.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-6" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-7">
+                                    <h4 class="panel-title">
+                                        7.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-7" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-8">
+                                    <h4 class="panel-title">
+                                        8.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-8" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-9">
+                                    <h4 class="panel-title">
+                                        9.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-9" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+
+                        <div class="panel panel-default panel-faq">
+                            <div class="panel-heading container-fluid">
+                                <a data-toggle="collapse" data-parent="#accordion-cat-6" href="#faq-cat-6-sub-10">
+                                    <h4 class="panel-title">
+                                        10.What do you need to do before joininging the Tcloud?
+                                        <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                    </h4>
+                                </a>
+                            </div>
+                            <div id="faq-cat-6-sub-10" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    B.Tech/BE<br>
+                                    M.Tech/ME<br>
+                                    MS<br>
+                                    MCA/MSC<br>
+                                </div>
+                                <div class="media-body">
+                                <div class="panel-body-lower container-fluid">
+                                   <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Hyderabad</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training Online</button>
+                            <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing training</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Hyderabad</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training Online</button>
+                             <button type="button" class="btn btn-xs-tcloud">Telecom Protocol Testing Training in Bangalore</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Chennai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Delhi</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Mumbai</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in India</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in Kolkata</button>
+                             <button type="button" class="btn btn-xs-tcloud">LTE Protocol Testing Training in india</button>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                                                               </div>
                                                         </div>
                                                     </div>
@@ -413,34 +1454,34 @@
                                                 </div>
 
 
-                                              </div>
-                                          </div>
+
+
                 </div>
-
-<div class="col-md-4">
-
-                    <h2> Course Schedule</h2>
-                    <table class="table table-bordered" >
-                        {% for i in property %}
-                                <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
-                                <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
-                                <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
-                                <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
-                                <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
-
-
-                        {% endfor%}
-                    </table>
-
-                     <a class="btn btn-default" href="#" role="button">Join</a>
-                     <a class="btn btn-default" href="{% url 'ltepd_schedules' %}" role="button">Other Timings</a>
-                     <button type="button" class="btn btn-primary" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
-
-  </div>
+              </div>
             </div>
-        </div>
-    </section>
 
+              <div class="col-md-4">
+
+  <h2> Course Schedule</h2>
+      <table class="table table-bordered" >
+          {% for i in property %}
+            <tr><th>Course Name</th><td> {{ i.course_name }}</td></tr>
+            <tr><th>Start Date</th><td>{{ i.start_date }}</td></tr>
+            <tr><th>Duration</th><td>{{ i.duration }}</td></tr>
+            <tr><th>Faculty</th><td>{{ i.faculty }}</td></tr>
+            <tr><th>Demo</th><td><a href="{{ i.demo }}"target="_blank">{{ i.demo }}</a></td></tr>
+          {% endfor%}
+      </table> 
+
+          <a class="btn btn-default" href="#" role="button">Join</a>
+          <a class="btn btn-default" href="{% url 'ltept_schedules' %}" role="button">Other Timings</a>
+         <button type="button" class="btn btn-primary" data-target="#Starpopup" onclick="showpopup();">Detailed Course Content</button>
+
+              </div>
+
+      </div>
+        </div>
+</section>
 </body>
 
 
@@ -543,7 +1584,7 @@
     function  showpdf() {
 
 
-        window.location.href="/some_view/";
+        window.location.href="/some_view";
     }
 
 
@@ -557,3 +1598,8 @@
     </body>
 </html>
 {% endblock %}
+
+
+
+
+

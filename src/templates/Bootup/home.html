@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
-{% block title %} HOME | TCLOUD IT <img class="img-responsive" src="{% static 'images/tcloud.png' %}"> {% endblock %}
+{% block title %} HOME|TCLOUD IT {% endblock %}
 <ol class="breadcrumb">
   <li class="breadcrumb-item active">Home</li>
 </ol>
@@ -18,7 +17,7 @@
  {% include 'Bootup/home_recent_works.html' %}
 {% endblock %}
 
-{% block services %}
+{% block services %} 
  {% include 'Bootup/home_services.html' %}
 {% endblock %}
 
@@ -26,6 +25,6 @@
  {% include 'Bootup/home_middle.html' %}
 {% endblock %}
 
-{% block partner %}
+{% block partner %} 
  {% include 'Bootup/home_partner.html' %}
 {% endblock %}
