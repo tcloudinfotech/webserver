@@ -22,7 +22,6 @@
 <!--<style type="text/css">
 tr:hover {
 	background-color:#FCF;
-	
 }
 .features{margin: 0 0 13px 0;}
 </style>-->
@@ -36,7 +35,6 @@ tr:hover {
 
   <div class="table-responsive">
       <table class="table table-bordered table-hover">
-           
           <tr>
           <th width="90">Date</th>
           <th>Course Name</th>
@@ -48,20 +46,17 @@ tr:hover {
           {% for i in property %}
           
           <tr>
-            
             <td>{{ i.start_date }}</td>
             <td> {{ i.course_name }}</td>
             <td>{{ i.batchtype }}</td>
             <td>{{ i.duration }}</td>
             <td>{{ i.start_date }}</td>
             <td>{{ i.faculty }}</td>
-
           </tr>
                                       
           {% endfor%}
       </table>
   </div>
 </div>
-
 </section>
 {% endblock %}
