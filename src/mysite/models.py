@@ -12,7 +12,7 @@ class File_upload(models.Model):
 # Main datbase for Courses. All tables will pick the course details from this table.
 
 class Course(models.Model):
-    course_name = models.CharField(max_length=256, primary_key=True)
+    course_name = models.CharField(max_length=25, primary_key=True)
 
     def __unicode__(self):
         return unicode(self.course_name) or u''
