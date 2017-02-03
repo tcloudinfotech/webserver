@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from creds import EMAIL_HOST,EMAIL_PORT,EMAIL_USE_TLS,EMAIL_HOST_USER,EMAIL_HOST_PASSWORD
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -126,11 +127,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, "project_resource")
 
 
 
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='web.tcloudit@gmail.com'
-EMAIL_HOST_PASSWORD='9666138555'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST=EMAIL_HOST
+EMAIL_HOST_USER=EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD=EMAIL_HOST_PASSWORD
+EMAIL_PORT = EMAIL_PORT
+EMAIL_USE_TLS = EMAIL_USE_TLS
 
 
 
@@ -139,11 +140,3 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS +=(
     "django.core.context_processors.request",
 )
-
-
-
-
-
-
-
-
