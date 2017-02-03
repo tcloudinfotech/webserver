@@ -14,16 +14,16 @@ urlpatterns = [
     url(r'^courses/','mysite.views.courses',name='courses'),
     # url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     # url('^accounts/', include('django.contrib.auth.urls')),
-    url(r'^admin/', include(admin.site.urls)),   
+    url(r'^mycart/', include(admin.site.urls)),   
     url(r'^$','mysite.views.myhome', name='home'),
-    
+
     url(r'^contact/','mysite.views.Contact_View',name='contact'),
     url(r'^aboutus/','mysite.views.aboutus',name='aboutus'),
     # course tabs
     url(r'^datacom/','mysite.views.datacom',name='datacom'),
-    
-    
-    
+
+
+
     url(r'^info/','mysite.views.my_fun',name='info'),
     # Main tab of telecome and relative subtags.
     url(r'^Telecom/','mysite.views.telecom',name='telecom'),
@@ -64,14 +64,14 @@ urlpatterns = [
     url(r'^Nagios/','mysite.views.nagios',name='nagios'),
     url(r'^GIT/','mysite.views.git',name='git'),
     url(r'^Jenkins/','mysite.views.jenkins',name='jenkins'),
-    
+
 
 
     # services
     #url(r'^services/','mysite.views.services',name='services'),
     url(r'^products/','mysite.views.products',name='products'),
     url(r'^services/','mysite.views.services',name='services'),
-    
+
     # Other Schedules for Scripting:
 
     url(r'^python_schedules/','mysite.views.python_schedules',name='python_schedules'),
@@ -89,7 +89,7 @@ urlpatterns = [
         name='voipsipimspd_schedules'),
     url(r'^voipsipimspt_schedules/','mysite.views.voipsipimspt_schedules',
         name='voipsipimspt_schedules'),
-    
+
     # Other Schedules for Datacom:
 
     url(r'^l2l3pd_schedules/','mysite.views.l2l3pd_schedules',name='l2l3pd_schedules'),
@@ -120,7 +120,7 @@ urlpatterns = [
 
 
 
-    
-    
+
+
 
 ]
